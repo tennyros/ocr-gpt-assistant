@@ -1,5 +1,11 @@
 # OCR-GPT Assistant
 
+![CI](https://github.com/<USER>/<REPO>/actions/workflows/ci.yml/badge.svg)
+![Python](https://img.shields.io/badge/python-3.7%2B-blue)
+![License](https://img.shields.io/github/license/<USER>/<REPO>)
+![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
+![Requirements Status](https://img.shields.io/badge/requirements-up%20to%20date-brightgreen)
+
 A tool for capturing screen text and analyzing it using OCR and Ollama LLM.
 
 ## Features
