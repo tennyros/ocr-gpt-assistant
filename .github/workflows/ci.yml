@@ -31,4 +31,8 @@ jobs:
     - name: Test with pytest (if tests exist)
       run: |
         pip install pytest
-        pytest || echo 'No tests found, skipping.' 
+        pytest || echo 'No tests found, skipping.'
+
+    - name: Run unittests
+      run: |
+        python -m unittest discover tests 

@@ -67,6 +67,9 @@ RIGHT_MONITOR_BBOX=2560,0,5120,1440
 
 # Enable smart capture (True/False)
 SMART_CAPTURE=False
+
+# Monitor bounding boxes for hotkeys (format: hotkey:left,top,right,bottom;...)
+MONITOR_BBOXES=ctrl+1:0,0,2560,1440;ctrl+2:2560,0,5120,1440
 ```
 
 ## Usage Modes

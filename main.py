@@ -1,14 +1,23 @@
 """
 OCR-GPT Assistant: main entry point (interval mode)
 """
+
 import logging
 from time import sleep
 import argparse
 from core.screen_capture import capture_screen, smart_capture_text
 from core.ocr_processor import analyze_text_from_image
-from config import CAPTURE_INTERVAL, SMART_CAPTURE, LEFT_MONITOR_BBOX, RIGHT_MONITOR_BBOX
+from config import (
+    CAPTURE_INTERVAL,
+    SMART_CAPTURE,
+    LEFT_MONITOR_BBOX,
+    RIGHT_MONITOR_BBOX,
+)
 
-logging.basicConfig(level=logging.INFO, format='[%(asctime)s] %(levelname)s: %(message)s')
+logging.basicConfig(
+    level=logging.INFO, format="[%(asctime)s] %(levelname)s: %(message)s"
+)
+
 
 def main(screen: str = "all") -> None:
     """
@@ -17,7 +26,9 @@ def main(screen: str = "all") -> None:
     Args:
         screen: Which screen to capture ("left", "right", or "all")
     """
-    logging.info(f"OCR-GPT Assistant started (interval mode, screen={screen})...")
+    logging.info(
+        f"OCR-GPT Assistant started (interval mode, screen={screen})..."
+    )
 
     # Configure screen region based on mode
     if screen == "left":
@@ -46,16 +57,20 @@ def main(screen: str = "all") -> None:
     except Exception as e:
         logging.error(f"Unhandled error: {e}")
 
+
 def cli():
-    parser = argparse.ArgumentParser(description="OCR-GPT Assistant Interval Mode")
+    parser = argparse.ArgumentParser(
+        description="OCR-GPT Assistant Interval Mode"
+    )
     parser.add_argument(
         "--screen",
         choices=["left", "right", "all"],
         default="all",
-        help="Screen region to capture"
+        help="Screen region to capture",
     )
     args = parser.parse_args()
     main(screen=args.screen)
+
 
 if __name__ == "__main__":
     cli()
