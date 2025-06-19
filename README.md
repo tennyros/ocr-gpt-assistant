@@ -12,7 +12,7 @@ A tool for capturing screen text and analyzing it using OCR and Ollama LLM.
 
 ## Requirements
 
-- Python 3.7+
+- Python 3.7+ (use `python3` command)
 - Tesseract OCR (automatically checked at startup)
   - Windows: Download from [UB Mannheim](https://github.com/UB-Mannheim/tesseract/wiki)
   - Linux: `sudo apt install tesseract-ocr`
@@ -58,6 +58,33 @@ CAPTURE_DELAY=0     # Delay in seconds before capture
 OLLAMA_URL=http://localhost:11434  # Ollama API URL
 OLLAMA_MODEL=deepseek-coder:6.7b   # Model to use
 ```
+
+## Usage Modes
+
+### Interval Mode (automatic capture)
+Captures screen at regular intervals:
+
+```bash
+# Capture full screen
+python3 run.py --mode interval --screen all
+
+# Capture left monitor only
+python3 run.py --mode interval --screen left
+
+# Capture right monitor only
+python3 run.py --mode interval --screen right
+```
+
+### Hotkey Mode
+Capture specific screen regions using hotkeys:
+
+```bash
+python3 run.py --mode hotkey
+```
+
+Available hotkeys:
+- `Ctrl+1`: Capture left monitor
+- `Ctrl+2`: Capture right monitor
 
 ## Usage
 

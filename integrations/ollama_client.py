@@ -4,6 +4,7 @@ Ollama API client for text analysis
 import logging
 import requests
 from typing import Optional
+from config import OLLAMA_URL, OLLAMA_MODEL
 
 class OllamaClient:
     def __init__(self, base_url: str = "http://localhost:11434"):
@@ -36,3 +37,18 @@ class OllamaClient:
         except Exception as e:
             logging.error(f"Ollama request error: {e}")
             return None
+
+# Create global client instance
+_client = OllamaClient(OLLAMA_URL)
+
+def ask_ollama(text: str) -> Optional[str]:
+    """
+    Send text to Ollama for analysis using global client instance
+    
+    Args:
+        text: Text to analyze
+        
+    Returns:
+        Optional[str]: Model's response or None if failed
+    """
+    return _client.analyze_text(text, model=OLLAMA_MODEL)
