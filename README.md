@@ -1,8 +1,8 @@
 # OCR-GPT Assistant
 
-![CI](https://github.com/<USER>/<REPO>/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/tennyros/ocr-gpt-assistant/actions/workflows/ci.yml/badge.svg?branch=dev)
 ![Python](https://img.shields.io/badge/python-3.7%2B-blue)
-![License](https://img.shields.io/github/license/<USER>/<REPO>)
+![License](https://img.shields.io/github/license/tennyros/ocr-gpt-assistant)
 ![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)
 ![Requirements Status](https://img.shields.io/badge/requirements-up%20to%20date-brightgreen)
 
