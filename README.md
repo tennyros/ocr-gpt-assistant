@@ -2,32 +2,49 @@
 
 A tool for capturing screen text and analyzing it using OCR and Ollama LLM.
 
+## Features
+
+- Screen capture and OCR text recognition
+- Text analysis using Ollama LLM
+- Desktop notifications (Linux)
+- Automatic Tesseract installation check
+- Configuration through environment variables
+
 ## Requirements
 
 - Python 3.7+
-- Tesseract OCR must be installed on your system:
+- Tesseract OCR (automatically checked at startup)
   - Windows: Download from [UB Mannheim](https://github.com/UB-Mannheim/tesseract/wiki)
   - Linux: `sudo apt install tesseract-ocr`
   - macOS: `brew install tesseract`
 - Ollama running locally or accessible via network
+- For Linux notifications: `libnotify-bin`
 
 ## Installation
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/tennyros/ocr-gpt-assistant.git
    cd ocr-gpt-assistant
    ```
 
-2. Install Python dependencies:
+2. Install system dependencies (Linux only):
+   ```bash
+   sudo apt install libnotify-bin  # For desktop notifications
+   ```
+
+3. Install Python dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Copy `.env.sample` to `.env` and adjust settings as needed:
+4. Copy `.env.sample` to `.env` and adjust settings as needed:
    ```bash
    cp .env.sample .env
    ```
+
+Note: The program will check for Tesseract OCR at startup and provide installation 
+instructions if needed.
 
 ## Configuration
 
