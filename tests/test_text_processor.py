@@ -1,5 +1,5 @@
 import unittest
-from unittest.mock import patch, MagicMock, ANY
+from unittest.mock import patch, ANY
 from core.text_processor import TextProcessor
 
 

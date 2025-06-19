@@ -70,7 +70,8 @@ def on_release(key):
 def main() -> None:
     logging.info("OCR-GPT Assistant started (hotkey mode)...")
     logging.info(
-        "Press configured hotkeys to capture and analyze specific screen regions"
+        "Press configured hotkeys to capture and"
+        "analyze specific screen regions"
     )
     with keyboard.Listener(
         on_press=on_press, on_release=on_release

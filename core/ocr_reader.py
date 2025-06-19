@@ -13,7 +13,8 @@ from config import OCR_LANGUAGE
 
 def check_tesseract_installed() -> bool:
     """
-    Check if Tesseract is installed and provide installation instructions if not
+    Check if Tesseract is installed and provide installation
+    instructions if not
 
     Returns:
         bool: True if Tesseract is installed, False otherwise
@@ -26,11 +27,13 @@ def check_tesseract_installed() -> bool:
 
         if system == "windows":
             print(
-                "1. Download installer from: https://github.com/UB-Mannheim/tesseract/wiki"
+                "1. Download installer from: "
+                "https://github.com/UB-Mannheim/tesseract/wiki"
             )
             print("2. Run the installer and follow the instructions")
             print(
-                "3. Add Tesseract to PATH or set TESSERACT_CMD in your environment"
+                "3. Add Tesseract to PATH or set TESSERACT_CMD"
+                "in your environment"
             )
 
         elif system == "darwin":  # macOS
@@ -45,7 +48,8 @@ def check_tesseract_installed() -> bool:
 
         else:
             print(
-                "Please visit https://tesseract-ocr.github.io/tessdoc/Installation.html"
+                "Please visit https://tesseract-ocr.github.io/tessdoc/"
+                "Installation.html"
             )
 
         return False
