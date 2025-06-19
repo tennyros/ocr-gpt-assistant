@@ -1,6 +1,5 @@
 import unittest
 from unittest.mock import patch, MagicMock
-import sys
 from core.notifier import Notifier
 
 

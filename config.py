@@ -4,7 +4,7 @@ Configuration settings for OCR-GPT Assistant
 
 import os
 from dotenv import load_dotenv
-from typing import Tuple, Optional
+from typing import Tuple
 
 # Load environment variables from .env file if present
 load_dotenv()
@@ -57,7 +57,7 @@ def parse_monitor_bboxes(env_var: str, default: str) -> dict:
         key, coords = item.split(":")
         parts = [int(x) for x in coords.split(",")]
         if len(parts) != 4:
-            raise ValueError(f"Each bbox must have 4 comma-separated integers")
+            raise ValueError("Each bbox must have 4 comma-separated integers")
         bboxes[key] = tuple(parts)
     return bboxes
 

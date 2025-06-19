@@ -7,7 +7,7 @@ import cv2
 import numpy as np
 from PIL import ImageGrab
 import pytesseract
-from typing import Optional, Tuple, Union
+from typing import Optional, Tuple
 from PIL.Image import Image
 
 
