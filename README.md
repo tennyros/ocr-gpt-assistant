@@ -49,14 +49,24 @@ instructions if needed.
 ## Configuration
 
 Edit the `.env` file to configure:
+
 ```ini
 # OCR settings
-OCR_LANGUAGE=eng    # OCR language(s), e.g., eng+rus for multiple
-CAPTURE_DELAY=0     # Delay in seconds before capture
+OCR_LANGUAGE=eng
+
+# Interval between screen captures (in seconds)
+CAPTURE_INTERVAL=5
 
 # Ollama settings
-OLLAMA_URL=http://localhost:11434  # Ollama API URL
-OLLAMA_MODEL=deepseek-coder:6.7b   # Model to use
+OLLAMA_URL=http://localhost:11434
+OLLAMA_MODEL=deepseek-coder:6.7b
+
+# Monitor bounding boxes (left, upper, right, lower)
+LEFT_MONITOR_BBOX=0,0,2560,1440
+RIGHT_MONITOR_BBOX=2560,0,5120,1440
+
+# Enable smart capture (True/False)
+SMART_CAPTURE=False
 ```
 
 ## Usage Modes
@@ -89,6 +99,7 @@ Available hotkeys:
 ## Usage
 
 Run the script:
+
 ```bash
 python main.py
 ```
