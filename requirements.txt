@@ -4,5 +4,5 @@ python-dotenv==1.0.0
 requests==2.32.4
 notify2==0.3.1; platform_system == "Linux"
 pynput==1.7.6
-opencv-python==4.8.0.74
+opencv-python==4.8.1.78
 numpy==1.24.3
